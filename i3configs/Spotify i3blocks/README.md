@@ -2,11 +2,11 @@
 
 Add these lines in i3blocks.conf
 # Usage
-
+```
 # Spotify icon \uF1BC
-[spotify]
+ [spotify]
 label=
 command=~/.config/i3blocks/scripts/spotify.py
 color=#81b71a
 interval=5
-
+```
