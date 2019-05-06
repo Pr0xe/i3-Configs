@@ -1,4 +1,4 @@
-You can find the script in [a link](https://github.com/firatakandere/i3blocks-spotify.git)
+You can find the script in [Spotify Script](https://github.com/firatakandere/i3blocks-spotify.git)
 
 # i3blocks-spotify
 Very simple Python script to display artist name and track title on i3blocks.
