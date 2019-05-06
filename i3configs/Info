@@ -1,1 +1,3 @@
 Copy & Paste the i3config code into .config/i3/config 
+config file is entire i3 file
+i3config file is only the bar config 
