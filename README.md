@@ -1,6 +1,5 @@
 # i3-gaps-Configs-
-Config files for i3-gaps, i3blocks &amp; urxvt
-(urxvt colorized by wal)
+Config files for i3
 
 <b>Urxvt & gaps</b>
 ![urxvt](https://github.com/Pr0xe/i3-gaps-Configs/blob/master/urxvt/desktop.png)
