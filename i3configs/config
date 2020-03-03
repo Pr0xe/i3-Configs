@@ -40,7 +40,7 @@ client.background       $bg
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -60,12 +60,8 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+c exec --no-startup-id firefox
 
 #lock screen
+# https://github.com/madonius/i3-fourier-lockscreen
 #bindsym $mod+comma exec ~/.config/i3/i3-fourier-lockscreen/lockscreen.sh
-
-#take screenshot
-bindsym --release  $mod+p exec  scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png && notify-send "you took a screenshot. You creep!"
-bindsym --release  $mod+Shift+p exec scrot -s ~/foo.png && xclip -selection clipboard -t image/png -i ~/foo.png && notify-send "you took a screenshot. You creep!"
-bindsym --release  $mod+v exec  xclip -se c -t image/png -o > out.png
 
 # change focus
 bindsym $mod+j focus left
@@ -186,18 +182,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)#
-
-# Sreen brightness controls
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
-
-# Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
