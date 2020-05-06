@@ -1,5 +1,7 @@
 # i3-gaps-Configs-
 Config files for i3
+### Not Recommended to i3 beginners! 
+
 
 <b>Urxvt & gaps</b>
 ![urxvt](https://github.com/Pr0xe/i3-gaps-Configs/blob/master/urxvt/desktop.png)
