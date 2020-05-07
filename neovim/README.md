@@ -18,11 +18,11 @@ $ pip2 install pynvim
 $ pip3 install pynvim
 ```
 * you will need the package ctags for tagbar plugin
-for Debian / Ubuntu
+* for Debian / Ubuntu
 ```sh
 sudo apt install ctags
 ```
-for Arch / Manjaro
+* for Arch / Manjaro
 ```sh  
 sudo pacman -S ctags
 ```
