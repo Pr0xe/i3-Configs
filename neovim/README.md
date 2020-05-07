@@ -17,7 +17,7 @@ if not, follow this link [Vim Plug](https://github.com/junegunn/vim-plug)
 $ pip2 install pynvim
 $ pip3 install pynvim
 ```
-* you will need the package ctags too for tagbar plugin
+* you will need the package ctags for tagbar plugin
 for Debian / Ubuntu
 ```sh
 sudo apt install ctags
