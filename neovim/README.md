@@ -11,7 +11,7 @@ sudo pacman -S neovim
 if not, follow this link [Vim Plug](https://github.com/junegunn/vim-plug)
 
 * The most common location of init.vim    ->    ~/.config/nvim/init.vim 
-* copy paste in this location
+* copy paste my init.vim to ~/.config/nvim
 * carefull with python3 & python2 compatibility, maybe you will need this 
 ```sh
 $ pip2 install pynvim
