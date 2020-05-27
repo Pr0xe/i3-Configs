@@ -21,6 +21,13 @@ set statusline+=%*
 filetype on              
 map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 colorscheme gruvbox
 let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
