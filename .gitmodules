@@ -1,0 +1,2 @@
+[submodule "i3configs/i3blocks/blocks"]
+	url = https://github.com/vivien/i3blocks-contrib
