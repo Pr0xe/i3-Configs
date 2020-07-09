@@ -1,4 +1,4 @@
-# i3-gaps-Configs-
+# i3wm-Configs
 Config files for i3
 ### Not Recommended to i3 beginners! 
 
