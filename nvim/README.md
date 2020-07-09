@@ -25,7 +25,7 @@ $ mv ~/.config/nvim/colors/* ~/.config/nvim/
 ```
 test if working with
 eg.
-:colorscheme molokai 
+* :colorscheme molokai 
 
 * you will need the package ctags for tagbar plugin
 * for Debian / Ubuntu
