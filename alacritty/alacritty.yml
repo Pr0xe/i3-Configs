@@ -4,7 +4,10 @@ window:
         decorations: full
 font:
         size: 8
- # Colors 
+        normal:
+                family: Meslo LG M DZ for Powerline
+                style: Regular
+# Colors
 colors:
   # Default colors
   primary:
