@@ -17,6 +17,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set nohlsearch
+set termguicolors
 filetype on              
 map <C-n> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
