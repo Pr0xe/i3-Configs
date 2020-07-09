@@ -44,4 +44,4 @@ $ nvim ~/.config/nvim/init.vim
 :PlugInstall
 ```
 ### Done
-![alt text](https://github.com/Pr0xe/i3-Configs/blob/master/neovim/nvim_setup.png)
+![alt text](https://github.com/Pr0xe/i3-Configs/blob/master/nvim/vimscreen.png)
