@@ -1,6 +1,5 @@
 set number
 syntax on
-set laststatus=2
 set autoindent
 set cindent
 set hidden 
@@ -12,14 +11,15 @@ set tabpagemax=15
 set showtabline=2
 set nocompatible            
 set mouse=a
-set noshowmode
 set cursorline
 set cursorcolumn
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set nohlsearch
 filetype on              
 map <C-n> :NERDTreeToggle<CR>
+map <C-t> :tabnew<CR>
 nmap <F8> :TagbarToggle<CR>
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -28,36 +28,25 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-colorscheme gruvbox
-let g:airline_theme='onedark'
-let g:airline#extensions#tabline#enabled = 1
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"CPP Features
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_concepts_highlight = 1
+colorscheme molokai
+let g:calendar_frame = 'default'
+"Loading vim files
+source $HOME/.config/nvim/configs/synnerd.vim
+source $HOME/.config/nvim/configs/customise.vim
+source $HOME/.config/nvim/configs/cpp-ef.vim
+source $HOME/.config/nvim/configs/airline.vim
 "####### Plugins PLUG######
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
-Plug 'andymass/vim-matchup'
 Plug 'frazrepo/vim-rainbow'
-Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'shougo/deoplete.nvim'
 Plug 'majutsushi/tagbar'
+Plug 'inside/vim-search-pulse'
+Plug 'itchyny/calendar.vim'
 call plug#end()
-
-
-
 
