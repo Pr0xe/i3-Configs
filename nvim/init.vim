@@ -48,5 +48,5 @@ Plug 'shougo/deoplete.nvim'
 Plug 'majutsushi/tagbar'
 Plug 'inside/vim-search-pulse'
 Plug 'itchyny/calendar.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
-
