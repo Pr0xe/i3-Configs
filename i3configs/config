@@ -200,11 +200,8 @@ gaps outer 0
 bindsym Print exec flameshot gui
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
-bindsym $mod+k exec ~/.config/i3/layout.sh
 exec --no-startup-id gxkb  
-exec feh --bg-fill ~/Pictures/archfree.png
 exec --no-startup-id "xset s off"
 exec --no-startup-id "xset -dpms"
-bindsym $mod+Shift+p exec --no-startup-id systemctl suspend 
 bindsym Control+$mod+Delete exec ~/.config/i3/i3blocks/blocks/shutdown_menu/shutdown_menu
 
