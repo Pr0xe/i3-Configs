@@ -18,7 +18,7 @@ Follow this link [Vim Plug](https://github.com/junegunn/vim-plug#neovim)
 $ pip2 install pynvim
 $ pip3 install pynvim
 ```
-### For colorschemes
+### For [colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 ```sh 
 $ git clone https://github.com/rafi/awesome-vim-colorschemes.git ~/.config/nvim/colors
 $ mv ~/.config/nvim/colors/* ~/.config/nvim/
