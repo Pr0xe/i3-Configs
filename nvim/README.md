@@ -21,7 +21,6 @@ $ pip3 install pynvim
 ### For [colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
 ```sh 
 $ git clone https://github.com/rafi/awesome-vim-colorschemes.git ~/.config/nvim/colors
-$ mv ~/.config/nvim/colors/* ~/.config/nvim/
 ```
 test if working with
 eg.
