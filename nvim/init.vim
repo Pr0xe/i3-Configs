@@ -23,7 +23,6 @@ source $HOME/.config/nvim/configs/synnerd.vim
 source $HOME/.config/nvim/configs/customise.vim
 source $HOME/.config/nvim/configs/cpp-ef.vim
 source $HOME/.config/nvim/configs/airline.vim
-source ~/.cache/calendar.vim/credentials.vim
 source $HOME/.config/nvim/configs/markdown.vim
 "####### Plugins PLUG######
 call plug#begin('~/.vim/plugged')
