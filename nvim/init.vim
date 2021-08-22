@@ -3,12 +3,15 @@ filetype on
 "map leader 
 let mapleader = ","
 "buffer navigation"
-map <leader>n :bn<cr>
-map <leader>p :bp<cr>
-map <leader>d :bd<cr>
+map <leader>n :bn<cr> "buffer next
+map <leader>p :bp<cr> "buffer previous
+map <leader>d :bd<cr> "buffer delete
 map <C-n> :NERDTreeToggle<CR>
 map <C-t> :tabnew<CR>
+map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
+map <F3> :source ~/vim_session <cr>     " And load session with F3
 nmap <F8> :TagbarToggle<CR>
+nmap <leader>s :SyntasticToggleMode<CR>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -23,6 +26,7 @@ source $HOME/.config/nvim/configs/synnerd.vim
 source $HOME/.config/nvim/configs/customise.vim
 source $HOME/.config/nvim/configs/cpp-ef.vim
 source $HOME/.config/nvim/configs/airline.vim
+source ~/.cache/calendar.vim/credentials.vim
 source $HOME/.config/nvim/configs/markdown.vim
 "####### Plugins PLUG######
 call plug#begin('~/.vim/plugged')
@@ -41,4 +45,3 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tybenz/vimdeck'
 Plug 'tpope/vim-markdown'
 call plug#end()
-

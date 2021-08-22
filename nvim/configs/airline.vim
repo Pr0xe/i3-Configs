@@ -1,3 +1,4 @@
+set showtabline=2
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -13,7 +14,7 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 " Switch to your current theme
-let g:airline_theme = 'night_owl'
+let g:airline_theme = 'serene'
 
 " Always show tabs
-set showtabline=2
+

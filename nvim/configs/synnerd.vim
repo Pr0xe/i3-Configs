@@ -1,4 +1,9 @@
 "NERDCOMMENTER
+"USAGE <MAP>cc (comment the current line)
+"<MAP>cm (comment selected lines)
+"<MAP>c-space (toggle comment)
+"<MAP>cu (Undo the selected comments)
+
 let mapleader="."
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1

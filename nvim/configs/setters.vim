@@ -1,4 +1,5 @@
 set number relativenumber
+set ft=nasm
 set autoindent
 set cindent
 set hidden 
