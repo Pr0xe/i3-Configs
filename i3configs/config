@@ -223,4 +223,3 @@ exec_always --no-startup-id autotiling
 exec feh --bg-fill ~/Pictures/joker.jpg
 exec --no-startup-id "xset s off"
 exec --no-startup-id "xset -dpms"
-#exec "setxkbmap -option 'grp:alt_space_toggle' -layout us,gr "
