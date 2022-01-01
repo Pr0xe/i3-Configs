@@ -1,0 +1,77 @@
+[theme]
+name = "space-villain"
+[icons]
+name = "awesome"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+format = "{icon}{available}"
+
+[[block]]
+block = "net"
+format = "{ssid}{speed_down;K*B}"
+interval = 5
+[block.theme_overrides]
+idle_fg = "#e0ffff"
+
+[[block]]
+block = "memory"
+format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
+interval = 5
+warning_mem = 80
+critical_mem = 95
+[block.theme_overrides]
+idle_fg = "#E0FFFF"
+
+[[block]]
+block = "cpu"
+interval = 5
+format = "{utilization} {frequency}"
+[block.theme_overrides]
+idle_fg = "#ff6666"
+
+[[block]]
+block = "custom"
+command = ''' echo "{\"icon\":\"tux\",\"text\":\"`uname -r`\"}" '''
+interval = "once"
+json = true
+[block.theme_overrides]
+idle_fg = "#ffff00"
+
+[[block]]
+block = "uptime"
+[block.theme_overrides]
+idle_fg = "#FFFFFF"
+
+[[block]]
+block = "sound"
+step_width = 3
+[block.theme_overrides]
+idle_fg = "#d70a53"
+
+
+[[block]]
+block = "backlight"
+device = "intel_backlight"
+[block.theme_overrides]
+idle_fg = "#FFFFFF"
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage} {time}"
+[block.theme_overrides]
+info_bg = "#002060"
+info_fg = "#FFFFFF"
+
+[[block]]
+block = "time"
+format = "%a %d-%m-%Y %H:%M"
+timezone = "Europe/Athens"
+interval = 60
+locale = "en_US"
+on_click = "gsimplecal"
+[block.theme_overrides]
+idle_fg="#50C878"
