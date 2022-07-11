@@ -3,6 +3,7 @@ name = "space-villain"
 [icons]
 name = "awesome"
 
+
 [[block]]
 block = "disk_space"
 path = "/"
@@ -51,16 +52,8 @@ step_width = 3
 [block.theme_overrides]
 idle_fg = "#d70a53"
 
-
-[[block]]
-block = "backlight"
-device = "intel_backlight"
-[block.theme_overrides]
-idle_fg = "#FFFFFF"
-
 [[block]]
 block = "battery"
-driver = "upower"
 format = "{percentage} {time}"
 [block.theme_overrides]
 info_bg = "#002060"
