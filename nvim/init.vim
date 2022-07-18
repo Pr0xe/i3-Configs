@@ -20,6 +20,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 
@@ -35,7 +36,6 @@ source $HOME/.config/nvim/configs/markdown.vim
 source $HOME/.config/nvim/configs/goyo.vim
 source $HOME/.config/nvim/configs/onedark.vim
 source $HOME/.config/nvim/configs/gitguter.vim
-source ~/.cache/calendar.vim/credentials.vim
 "----------  simple settings
 syntax on
 filetype on
@@ -43,8 +43,8 @@ let mapleader = "."
 
 " ---------  ####### Colorscheme ######  ---------
 
-let g:airline_theme = 'serene'
-colorscheme github_dark_default
+let g:airline_theme = 'night_owl'
+colorscheme onedark
 
 " ---------  ####### tab navigation ######  ---------
 

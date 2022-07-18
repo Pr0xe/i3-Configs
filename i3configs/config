@@ -41,9 +41,7 @@ bindsym $mod+q kill
 
 # PROTIP: You can also dynamically set dmenu's colors this way:
 #bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
-bindsym $mod+d exec rofi -show drun -theme $HOME/git/rofi-collection/material/material.rasi
-bindsym $mod+s exec rofi -show ssh -theme $HOME/git/rofi-collection/material/material.rasi
-bindsym $mod+Shift+w exec rofi -show window -theme $HOME/git/rofi-collection/material/material.rasi
+bindsym $mod+d exec dmenu_run 
 
 #lock screen
 bindsym $mod+l exec ~/lock.sh
