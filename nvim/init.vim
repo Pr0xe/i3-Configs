@@ -141,6 +141,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:airline_theme = 'onedark'
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
