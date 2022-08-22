@@ -9,6 +9,11 @@ set showmatch
 set incsearch
 set ignorecase
 set smartcase
+set noerrorbells
+set ruler
+set noswapfile
+set nobackup
+set nowritebackup
 set background=dark
 set tabpagemax=15
 set nocompatible
@@ -55,6 +60,10 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'flazz/vim-colorschemes'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-scripts/c.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'matsuuu/pinkmare'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 "----------  simple settings
@@ -67,7 +76,8 @@ let mapleader = "."
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
-colorscheme onedark
+colorscheme pinkmare
+let g:airline_theme = 'google_dark'
 
 
 " ---------  ####### Keymaps ######  ---------
@@ -98,14 +108,13 @@ nmap <leader>s :SyntasticToggleMode<CR>
 
 " ---------  ####### Auto close symbols ######  ---------
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-vnoremap <BS> d
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap {<CR> {<CR>}<ESC>O
+" inoremap {;<CR> {<CR>};<ESC>O
+" vnoremap <BS> d
 
 " ---------  ####### AYTOCMD executions ######  ---------
 
@@ -139,9 +148,8 @@ let g:syntastic_check_on_wq = 0
 
 " ---------  ####### AIRLINE CONFIGS ######  ---------
 
-let g:airline_theme = 'onedark'
+
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#tabline#enabled = 1
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
