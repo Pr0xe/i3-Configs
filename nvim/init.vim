@@ -63,7 +63,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/c.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'matsuuu/pinkmare'
-Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 "----------  simple settings
