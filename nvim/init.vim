@@ -63,7 +63,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/c.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'matsuuu/pinkmare'
-Plug 'sheerun/vim-polyglot'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 "----------  simple settings
@@ -78,7 +78,6 @@ if $TERM == "xterm-256color"
 endif
 colorscheme pinkmare
 let g:airline_theme = 'google_dark'
-
 
 " ---------  ####### Keymaps ######  ---------
 
@@ -104,17 +103,13 @@ map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle <CR>
+nnoremap <silent> <F12> :FloatermToggle<CR>
+tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
 nmap <leader>s :SyntasticToggleMode<CR>
 
-" ---------  ####### Auto close symbols ######  ---------
+" ---------  ####### FLOATERM ######  ---------
 
-" inoremap ' ''<left>
-" inoremap ( ()<left>
-" inoremap [ []<left>
-" inoremap { {}<left>
-" inoremap {<CR> {<CR>}<ESC>O
-" inoremap {;<CR> {<CR>};<ESC>O
-" vnoremap <BS> d
+hi FloatermBorder guibg=purple guifg=black
 
 " ---------  ####### AYTOCMD executions ######  ---------
 
