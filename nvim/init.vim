@@ -63,10 +63,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/c.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'matsuuu/pinkmare'
-<<<<<<< HEAD
 Plug 'voldikss/vim-floaterm'
-=======
->>>>>>> bb0d4a3db7f14df6b139b7d567569c1d555fc27f
 call plug#end()
 
 "----------  simple settings
