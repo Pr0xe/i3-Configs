@@ -17,7 +17,7 @@ set nowritebackup
 set background=dark
 set tabpagemax=15
 set nocompatible
-set mouse+=a
+set mouse=v
 set cursorline
 set cursorcolumn
 set statusline+=%#warningmsg#
@@ -28,7 +28,7 @@ set termguicolors
 set noshowmode
 set laststatus=2
 set cmdheight=2
-set updatetime=100
+set updatetime=200
 set signcolumn=yes
 set undofile
 set undodir =~/.config/nvim/undodir
@@ -39,7 +39,7 @@ set vb
 
 " ---------  ####### Plugins PLUG ######  ---------
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -51,19 +51,17 @@ Plug 'majutsushi/tagbar'
 Plug 'inside/vim-search-pulse'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-markdown'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'flazz/vim-colorschemes'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/c.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'matsuuu/pinkmare'
 Plug 'voldikss/vim-floaterm'
+Plug 'dstein64/vim-startuptime'
+Plug 'vim-scripts/c.vim'
 call plug#end()
 
 "----------  simple settings
@@ -76,28 +74,28 @@ let mapleader = "."
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
-colorscheme pinkmare
+colorscheme badwolf
 let g:airline_theme = 'google_dark'
 
 " ---------  ####### Keymaps ######  ---------
 
 "BUFFER MANAGEMENT
-nnoremap <silent>    <A-n> <Cmd>ene <CR>
+nnoremap <silent> <M-t> :enew<CR>
 " Move to previous/next
-nnoremap <silent>    <A-,> <Cmd>bp<CR>
-nnoremap <silent>    <A-.> <Cmd>bn<CR>
+nnoremap <silent> <M-,> :bp<CR>
+nnoremap <silent> <M-.> :bn<CR>
 " Goto buffer in position...
-nnoremap <silent>    <A-1> <Cmd>buffer 1<CR>
-nnoremap <silent>    <A-2> <Cmd>buffer 2<CR>
-nnoremap <silent>    <A-3> <Cmd>buffer 3<CR>
-nnoremap <silent>    <A-4> <Cmd>buffer 4<CR>
-nnoremap <silent>    <A-5> <Cmd>buffer 5<CR>
-nnoremap <silent>    <A-6> <Cmd>buffer 6<CR>
-nnoremap <silent>    <A-7> <Cmd>buffer 7<CR>
-nnoremap <silent>    <A-8> <Cmd>buffer 8<CR>
-nnoremap <silent>    <A-9> <Cmd>buffer 9<CR>
+nnoremap <silent> <M-1> :buffer 1<CR>
+nnoremap <silent> <M-2> :buffer 2<CR>
+nnoremap <silent> <M-3> :buffer 3<CR>
+nnoremap <silent> <M-4> :buffer 4<CR>
+nnoremap <silent> <M-5> :buffer 5<CR>
+nnoremap <silent> <M-6> :buffer 6<CR>
+nnoremap <silent> <M-7> :buffer 7<CR>
+nnoremap <silent> <M-8> :buffer 8<CR>
+nnoremap <silent> <M-9> :buffer 9<CR>
 " Close buffer
-nnoremap <silent>    <A-c> <Cmd>bd<CR>
+nnoremap <silent> <M-c> :bd<CR>
 
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
@@ -112,13 +110,13 @@ nmap <leader>s :SyntasticToggleMode<CR>
 hi FloatermBorder guibg=purple guifg=black
 
 " ---------  ####### AYTOCMD executions ######  ---------
-
-autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-autocmd BufReadPost *.doc,*.docx,*.rtf,*.odp,*.odt silent %!pandoc "%" -tplain -o /dev/stdout
-autocmd BufWritePre * :%s/\s\+$//e
-autocmd Filetype c ClangFormatAutoEnable
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+augroup filebuffers
+	autocmd!
+	autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	autocmd BufWritePre * :%s/\s\+$//e
+	autocmd Filetype c,cpp,objc ClangFormatAutoEnable
+	autocmd Filetype python setl sw=4 sts=4 et
+augroup END
 
 " ---------  ####### Fancy Configs ######  ---------
 
@@ -173,21 +171,16 @@ let g:gitgutter_sign_removed = ''
 let g:gitgutter_sign_removed_first_line = ''
 let g:gitgutter_sign_modified_removed = ''
 
-" ---------  ####### goyo CONFIGS ######  ---------
-
-let g:goyo_height='90%'
-let g:goyo_width='90%'
-
-" ---------  ####### MARKDOWN CONFIGS ######  ---------
-
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
-let g:markdown_syntax_conceal = 0
-
 " ---------  ####### ONEDARK CONFIGS ######  ---------
 
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
+
+" ---------  ####### 	CUSTOM CONFIGS ######  ---------
+
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
 
   " ---------  ####### OPENURL FUNCTION ######  ---------
 
