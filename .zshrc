@@ -13,9 +13,11 @@ zstyle ':vcs_info:git:*' formats '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 setopt PROMPT_SUBST
+NEWLINE=$'\n'
+arrows=$'::⇒ '
 base_prompt="%B%{$fg[yellow]%}%(1j.%j.)%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[red]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$reset_color%}"
-post_prompt="%B%{$fg[red]%}]%{$reset_color%}⇒ %b"
-PROMPT='${base_prompt} %F{green}${vcs_info_msg_0_}%f${post_prompt}'
+post_prompt="%B%{$fg[red]%}]%{$reset_color%}%b"
+PROMPT='${base_prompt} %F{green}${vcs_info_msg_0_}%f${post_prompt}${NEWLINE}${arrows}'
 
 #History in cache directory
 HISTSIZE=10000
