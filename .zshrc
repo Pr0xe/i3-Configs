@@ -63,6 +63,6 @@ plugins=(git
 	copypath
 	encode64
 	)
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/home/pr0xe/.oh-my-zsh"
 export EDITOR='nvim'
 source $ZSH/oh-my-zsh.sh
