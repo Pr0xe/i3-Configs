@@ -20,9 +20,6 @@ set nocompatible
 set mouse=v
 set cursorline
 set cursorcolumn
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag(),coc#status()}
-set statusline+=%*
 set nohlsearch
 set termguicolors
 set noshowmode
@@ -36,6 +33,7 @@ set modifiable
 set showtabline=2
 set encoding=UTF-8
 set vb
+set scrolloff=10
 
 " ---------  ####### Plugins PLUG ######  ---------
 
@@ -62,6 +60,7 @@ Plug 'matsuuu/pinkmare'
 Plug 'voldikss/vim-floaterm'
 Plug 'dstein64/vim-startuptime'
 Plug 'vim-scripts/c.vim'
+Plug 'tomasr/molokai'
 call plug#end()
 
 "----------  simple settings
@@ -74,7 +73,7 @@ let mapleader = "."
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
-colorscheme badwolf
+colorscheme pinkmare
 let g:airline_theme = 'google_dark'
 
 " ---------  ####### Keymaps ######  ---------
@@ -97,19 +96,22 @@ nnoremap <silent> <M-9> :buffer 9<CR>
 " Close buffer
 nnoremap <silent> <M-c> :bd<CR>
 
-map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
-map <F3> :source ~/vim_session <cr>     " And load session with F3
+map <F2> :mksession! ~/.config/nvim/vim_session <cr> " Quick write session with F2
+map <F3> :source ~/.config/nvim/vim_session <cr>     " And load session with F3
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle <CR>
 nnoremap <silent> <F12> :FloatermToggle<CR>
 tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
 nmap <leader>s :SyntasticToggleMode<CR>
+let g:asmsyntax = 'nasm'
 
-" ---------  ####### FLOATERM ######  ---------
+" ---------  ####### HI COLORS ######  ---------
 
 hi FloatermBorder guibg=purple guifg=black
+hi CocMenuSel ctermfg=242 ctermbg=0 guifg=#ffffff guibg=#ff00ab
 
 " ---------  ####### AYTOCMD executions ######  ---------
+
 augroup filebuffers
 	autocmd!
 	autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -134,6 +136,7 @@ let g:rainbow_active = 1
 let mapleader="."
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
+let g:NERDCustomDelimiters = {'c':{'left': '/**','right': '*/'}}
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -143,6 +146,7 @@ let g:syntastic_check_on_wq = 0
 
 
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
