@@ -47,7 +47,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'majutsushi/tagbar'
 Plug 'inside/vim-search-pulse'
-Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rhysd/vim-clang-format'
 Plug 'joshdick/onedark.vim'
@@ -56,11 +55,11 @@ Plug 'flazz/vim-colorschemes'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'matsuuu/pinkmare'
 Plug 'voldikss/vim-floaterm'
-Plug 'dstein64/vim-startuptime'
 Plug 'vim-scripts/c.vim'
 Plug 'tomasr/molokai'
+Plug 'lambdalisue/suda.vim'
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 call plug#end()
 
 "----------  simple settings
@@ -73,9 +72,8 @@ let mapleader = "."
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
-colorscheme pinkmare
-let g:airline_theme = 'google_dark'
-
+colorscheme moonfly
+let g:airline_theme='moonfly'
 " ---------  ####### Keymaps ######  ---------
 
 "BUFFER MANAGEMENT
@@ -120,12 +118,14 @@ augroup filebuffers
 	autocmd Filetype python setl sw=4 sts=4 et
 augroup END
 
-" ---------  ####### Fancy Configs ######  ---------
+" ---------  ####### Random Configs ######  ---------
 
 "Search Pulse
 let g:vim_search_pulse_mode = 'cursor_line'
 "Rainbow Plugin
 let g:rainbow_active = 1
+"Smart edit suda
+let g:suda_smart_edit = 1
 
 " ---------  ####### NERDCOMMENTER ######  ---------
 
@@ -144,14 +144,17 @@ let g:syntastic_check_on_wq = 0
 
 " ---------  ####### AIRLINE CONFIGS ######  ---------
 
-
+let g:airline#extensions#disable_rtp_load=1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 " ---------  ####### CPP CONFIGS ######  ---------
 
