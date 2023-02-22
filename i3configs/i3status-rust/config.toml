@@ -1,25 +1,11 @@
 [theme]
-name = "space-villain"
+theme = "native"
 [icons]
-name = "awesome"
-
-
-[[block]]
-block = "disk_space"
-path = "/"
-info_type = "used"
-format = "{icon}{available}"
-
-[[block]]
-block = "net"
-format = "{ssid}{speed_down;K*B}"
-interval = 5
-[block.theme_overrides]
-idle_fg = "#e0ffff"
+icons = "awesome5"
 
 [[block]]
 block = "memory"
-format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
+format = " $mem_used / $mem_total($mem_used_percents)"
 interval = 5
 warning_mem = 80
 critical_mem = 95
@@ -29,7 +15,7 @@ idle_fg = "#E0FFFF"
 [[block]]
 block = "cpu"
 interval = 5
-format = "{utilization} {frequency}"
+format = " $icon $utilization"
 [block.theme_overrides]
 idle_fg = "#ff6666"
 
@@ -54,17 +40,18 @@ idle_fg = "#d70a53"
 
 [[block]]
 block = "battery"
-format = "{percentage} {time}"
+format = " $icon $percentage $time"
 [block.theme_overrides]
 info_bg = "#002060"
 info_fg = "#FFFFFF"
 
 [[block]]
 block = "time"
-format = "%a %d-%m-%Y %H:%M"
+format = " $icon $timestamp.datetime(f:'%d/%m/%Y %R', l:en_US)"
 timezone = "Europe/Athens"
 interval = 60
-locale = "en_US"
-on_click = "gsimplecal"
+[[block.click]]
+button = "left"
+cmd = "gsimplecal"
 [block.theme_overrides]
 idle_fg="#50C878"
