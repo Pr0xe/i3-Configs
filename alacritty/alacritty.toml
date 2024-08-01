@@ -1,0 +1,49 @@
+[colors.bright]
+black = "#808080"
+blue = "#0066ff"
+cyan = "#00ffff"
+green = "#33ff00"
+magenta = "#cc00ff"
+red = "#fe0100"
+white = "#FFFFFF"
+yellow = "#feff00"
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "#F81CE5"
+
+[colors.normal]
+black = "#000000"
+blue = "#0066ff"
+cyan = "#00ffff"
+green = "#33ff00"
+magenta = "#cc00ff"
+red = "#fe0100"
+white = "#d0d0d0"
+yellow = "#feff00"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[cursor]
+blink_interval = 500
+thickness = 0.15
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "always"
+shape = "block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 9
+
+[font.normal]
+family = "Fira Code"
+style = "Regular"
+
+[window]
+decorations = "full"
